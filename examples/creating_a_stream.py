@@ -1,4 +1,4 @@
-from credentials import ELFEST_BOBCAT
+from credentials import ELFEST_BOBCAT  # You'll have to supply your own
 import pandas as pd
 from microprediction import MicroWriter
 import time
@@ -6,8 +6,9 @@ import time
 # Video explanation of this example:
 # https://vimeo.com/443203883
 
-mw = MicroWriter(write_key=ELFEST_BOBCAT) # You'll have to supply your own
+mw = MicroWriter(write_key=ELFEST_BOBCAT) # See creating_a_key.py
 STREAM_NAME = 'water.json'
+
 
 def water_height():
     df = pd.read_csv('https://www.ndbc.noaa.gov/data/realtime2/21413.dart')
